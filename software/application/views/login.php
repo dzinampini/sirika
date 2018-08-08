@@ -43,7 +43,7 @@
           <?php } ?>
         </p>
       <div class="card-body">
-        <form action="<?php echo base_url(); ?>tracker/login_user" method="POST">
+        <form action="<?php echo base_url(); ?>welcome/login_user" method="POST">
           <div class="form-group">
             <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" name="email" placeholder="Enter email" required>
           </div>

@@ -70,7 +70,7 @@
                 <div class="search-box-outer">
                   <div class="dropdown"></div>
                 </div>
-                <a href="tracker/login" class="talk"><span class="icon fa fa-commenting"></span>Login</a> </div>
+                <a href="welcome/login" class="talk"><span class="icon fa fa-commenting"></span>Login</a> </div>
             </div>
             <!--Nav Outer End-->
           </div>
@@ -108,7 +108,7 @@
                 <div class="search-box-outer">
                   <div class="dropdown"></div>
                 </div>
-               <a href="tracker/login" class="talk"><span class="icon fa fa-commenting"></span>Login</a> </div>
+               <a href="welcome/login" class="talk"><span class="icon fa fa-commenting"></span>Login</a> </div>
               <!--Nav Outer End-->
             </div>
             <!--Nav Outer End-->

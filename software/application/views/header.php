@@ -43,10 +43,10 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseCompanyData">
             <li>
-              <a href="welcome/">Company Details</a>
+              <a href="mycompany">Company Details</a>
             </li>
             <li>
-              <a href="welcome/">Vehicles</a>
+              <a href="welcome/myvehicles">Vehicles</a>
             </li>
           </ul>
         </li>
