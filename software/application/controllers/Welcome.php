@@ -17,12 +17,30 @@
   }
 
   public function mycompany(){
-    $this->load->view('mycompany.php');
+    $data['companies']=$this->welcome_model->mycompany();
+    $data['staff']=$this->welcome_model->mystaff();
+    $this->load->view('mycompany.php', $data);
+
   }
 
   public function myvehicles(){
-    $this->load->view('myvehicles.php');
+    $data['vehicles']=$this->welcome_model->myvehicles();
+    $this->load->view('myvehicles.php', $data);
   }
+
+  public function addvehicle(){
+    $this->load->view('addvehicle.php');
+  }
+
+  public function preferences(){
+    $this->load->view('preferences.php');
+  }
+
+  public function dashboard(){
+    //if no session data redirect to login 
+    //if there is login data 
+    $this->load->view('dashboard');   
+}
 
   public function login_user(){
     $email=$this->input->post('email');
@@ -39,13 +57,13 @@
     }
     else{
       $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
-      $this->dashboard(); 
+      $this->login(); 
     }
   }
-
-  public function dashboard(){
-    //if no session data redirect to login 
-    //if there is login data 
-    $this->load->view('dashboard');   
+public function logout()
+{
+  $this->session->sess_destroy();
+    $this->index(); 
 }
+  
 }

@@ -20,16 +20,20 @@
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <?php
+    $con = mysqli_connect('localhost','root','');
+    mysqli_select_db($con, 'dzinaish_srk');
+    ?>
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="dashboard">Admin Panel</a>
+    <a class="navbar-brand" href="<?php echo base_url(); ?>welcome/dashboard">Admin Panel</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="dashboard">
+          <a class="nav-link" href="<?php echo base_url(); ?>welcome/dashboard">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
@@ -43,10 +47,10 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseCompanyData">
             <li>
-              <a href="mycompany">Company Details</a>
+              <a href="<?php echo base_url(); ?>welcome/mycompany">Company Details</a>
             </li>
             <li>
-              <a href="welcome/myvehicles">Vehicles</a>
+              <a href="<?php echo base_url(); ?>welcome/myvehicles">Vehicles</a>
             </li>
           </ul>
         </li>
@@ -59,16 +63,16 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseVehicleTracker">
             <li>
-              <a href="tracker/">Track Vehicles</a>
+              <a href="<?php echo base_url(); ?>tracker/locate">Locate Vehicles</a>
             </li>
             <li>
-              <a href="tracker/">Track History</a>
+              <a href="<?php echo base_url(); ?>tracker/history">Track History</a>
             </li>
             <li>
-              <a href="tracker/">Notifications</a>
+              <a href="<?php echo base_url(); ?>tracker/notifications">Notifications</a>
             </li>
             <li>
-              <a href="tracker/">Reports</a>
+              <a href="<?php echo base_url(); ?>tracker/reports">Reports</a>
             </li>
           </ul>
         </li>
@@ -80,10 +84,10 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseBTD">
             <li>
-              <a href="bts/">Add</a>
+              <a href="<?php echo base_url(); ?>bts/daily">Real Time Update</a>
             </li>
             <li>
-              <a href="bts/">View</a>
+              <a href="<?php echo base_url(); ?>bts/report">Reports</a>
             </li>
           </ul>
         </li>
@@ -96,10 +100,10 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseAFC">
             <li>
-              <a href="afc/">Vehicles</a>
+              <a href="<?php echo base_url(); ?>afc/daily">Real Time Update</a>
             </li>
             <li>
-              <a href="afc/">Reports</a>
+              <a href="<?php echo base_url(); ?>afc/report">Reports</a>
             </li>
           </ul>
         </li>
@@ -112,51 +116,9 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-fw fa-bell"></i>
-            <span class="d-lg-none">Alerts
-              <span class="badge badge-pill badge-warning">6 New</span>
-            </span>
-            <span class="indicator text-warning d-none d-lg-block">
-              <i class="fa fa-fw fa-circle"></i>
-            </span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="alertsDropdown">
-            <h6 class="dropdown-header">New Alerts:</h6>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <span class="text-success">
-                <strong>
-                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
-              </span>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <span class="text-danger">
-                <strong>
-                  <i class="fa fa-long-arrow-down fa-fw"></i>Status Update</strong>
-              </span>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <span class="text-success">
-                <strong>
-                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
-              </span>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item small" href="alerts">View all alerts</a>
-          </div>
-        </li>
+        
         <li class="nav-item">
-          <a class="nav-link" href="preferences">
+          <a class="nav-link" href="<?php echo base_url(); ?>welcome/preferences">
             <i class="fa fa-fw fa-cog"></i>Settings
           </a>
         </li>        

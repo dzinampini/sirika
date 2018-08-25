@@ -14,5 +14,54 @@
       return false;
     }
   }
+
+
+  public function mycompany(){
+    $company=$this->session->userdata('company');
+
+    $this->db->select('*');
+    $this->db->from('companies');    
+    $this->db->where('id', $company);
+    $q=$this->db->get();
+
+    if($q->num_rows() >0){
+      foreach($q->result() as $row){
+        $data[]=$row;
+      }
+      return $data; 
+    }
+  }
+
+  public function mystaff(){
+    $company=$this->session->userdata('company');
+
+    $this->db->select('*');
+    $this->db->from('users');    
+    $this->db->where('company', $company);
+    $q=$this->db->get();
+
+    if($q->num_rows() >0){
+      foreach($q->result() as $row){
+        $data[]=$row;
+      }
+      return $data; 
+    }
+  }
+
+  public function myvehicles(){
+    $company=$this->session->userdata('company');
+
+    $this->db->select('*');
+    $this->db->from('vehicles');    
+    $this->db->where('company', $company);
+    $q=$this->db->get();
+
+    if($q->num_rows() >0){
+      foreach($q->result() as $row){
+        $data[]=$row;
+      }
+      return $data; 
+    }
+  }
   
 }
