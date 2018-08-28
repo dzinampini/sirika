@@ -44,6 +44,9 @@
     <!-- Custom scripts for this page-->
     <script src="<?php echo base_url(); ?>js/sb-admin-datatables.min.js"></script>
     <script src="<?php echo base_url(); ?>js/sb-admin-charts.min.js"></script>
+
+    <script type="text/javascript" src="<?php echo base_url(); ?>js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
     <script>
     $('#toggleNavPosition').click(function() {
       $('body').toggleClass('fixed-nav');
@@ -60,6 +63,42 @@
     });
 
     </script>
+
+
+    
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    forceParse: 0,
+        showMeridian: 1
+    });
+  $('.form_date').datetimepicker({
+        // language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    minView: 2,
+    forceParse: 0
+    });
+  $('.form_time').datetimepicker({
+        // language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 1,
+    minView: 0,
+    maxView: 1,
+    forceParse: 0
+    });
+</script>
   </div>
 </body>
 

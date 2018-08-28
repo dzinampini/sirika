@@ -88,12 +88,14 @@ if($db_lat != '' && $db_lon != ''){ //this means you are getting in
 
 }
 
-else{ //you are getting out 
-  // calculate actual amount 
+else{ //means you are getting out of the bus now 
+  // calculate actual amount that is difference between two coordinates 
   $fare = $amount;
 
   // get current time and time  
-  $out_time = "14-08-2018 00:00:00"; 
+  // $out_time = "14-08-2018 00:00:00"; 
+  $out_time = date('Y-m-d H:i:s');
+
 
 
 
@@ -101,7 +103,7 @@ else{ //you are getting out
   $location = "UPDATE afc_rides SET  out_lat = '$lat', out_lon='$lon', amount='$fare', out_time='$out_time' WHERE id='$record_no'";
   $ins_loc = mysqli_query($con, $location) or die(mysqli_error($con)); 
 }
-}
+
 
 
 

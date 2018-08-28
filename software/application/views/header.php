@@ -10,6 +10,7 @@
   <title>SIRIKA - Admin Panel</title>
   <!-- Bootstrap core CSS-->
   <link href="<?php echo base_url(); ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo base_url(); ?>css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
   <!-- Custom fonts for this template-->
   <link href="<?php echo base_url(); ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
@@ -17,6 +18,7 @@
   <script src="<?php echo base_url(); ?>ckeditor/ckeditor/ckeditor.js"></script>
   <script src="<?php echo base_url(); ?>ckeditor/js/ckeditor/sample.js"></script>
   <link rel="stylesheet" href="<?php echo base_url(); ?>ckeditor/toolbarconfigurator/lib/codemirror/neo.css">
+
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -70,9 +72,6 @@
             </li>
             <li>
               <a href="<?php echo base_url(); ?>tracker/notifications">Notifications</a>
-            </li>
-            <li>
-              <a href="<?php echo base_url(); ?>tracker/reports">Reports</a>
             </li>
           </ul>
         </li>
